@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "curseplus",
+  "version": "${version}",
+  "name": "Curseplus",
+  "description": "Makes curse of binding never break.",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/curseplus/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.github.jonotcyber.curseplus.client.CurseplusClient"
+    ],
+    "main": [
+      "com.github.jonotcyber.curseplus.Curseplus"
+    ]
+  },
+  "mixins": [
+    "curseplus.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.12",
+    "fabric": "*",
+    "minecraft": "1.19.2"
+  }
+}
