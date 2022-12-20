@@ -4,6 +4,7 @@
   "package": "com.github.jonotcyber.curseplus.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ItemStackMixin"
   ],
   "client": [
   ],
