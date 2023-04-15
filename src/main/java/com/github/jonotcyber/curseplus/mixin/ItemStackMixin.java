@@ -11,10 +11,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class ItemStackMixin {
     @Inject(at = @At("HEAD"), method = "isDamageable()Z", cancellable = true)
     public void isDamageable(CallbackInfoReturnable<Boolean> cir) {
-        if (EnchantmentHelper.hasBindingCurse((ItemStack)((Object)this))) {
-            cir.setReturnValue(false);
-        } else {
-            cir.setReturnValue(true);
-        }
+	cir.setReturnValue(!EnchantmentHelper.hasBindingCurse((ItemStack)((Object)this)));
     }
 }
